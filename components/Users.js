@@ -16,7 +16,7 @@ const Users = ({navigation}) => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    getWorkHistoryList();
+    getUsersList();
   }, []);
 
   // React.useEffect(() => {
@@ -27,7 +27,7 @@ const Users = ({navigation}) => {
   //   return unsubscribe;
   // }, [navigation]);
 
-  getWorkHistoryList = async () => {
+  getUsersList = async () => {
     axios
       .get('https://randomuser.me/api/?results=100')
       .then(function (response) {
